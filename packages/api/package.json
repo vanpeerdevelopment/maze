@@ -1,0 +1,7 @@
+{
+  "name": "maze-api",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "echo maze-api: building"
+  }
+}

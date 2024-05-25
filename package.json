@@ -1,0 +1,13 @@
+{
+  "name": "maze",
+  "version": "0.0.0",
+  "scripts": {
+    "prebuild": "pnpm prettier:check",
+    "build": "pnpm -r --include-workspace-root build",
+    "prettier:check": "prettier --check .",
+    "prettier:run": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "3.2.5"
+  }
+}
