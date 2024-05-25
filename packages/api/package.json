@@ -2,6 +2,10 @@
   "name": "maze-api",
   "version": "0.0.0",
   "scripts": {
+    "start": "node src/app.js",
     "build": "echo maze-api: building"
+  },
+  "dependencies": {
+    "express": "4.19.2"
   }
 }
