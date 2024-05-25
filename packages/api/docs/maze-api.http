@@ -1,8 +1,8 @@
 ### GET Hello world
-GET {{host}}
+GET {{host}}/maze
 
 ### POST Hello world
-POST {{host}}
+POST {{host}}/maze
 Content-Type: application/json
 
 {
