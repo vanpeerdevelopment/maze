@@ -1,2 +1,10 @@
-### Hello world
+### GET Hello world
 GET {{host}}
+
+### POST Hello world
+POST {{host}}
+Content-Type: application/json
+
+{
+  "name": "Dieter"
+}
