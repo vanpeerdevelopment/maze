@@ -1,16 +1,16 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 
 const app = express();
 const port = process.env.PORT;
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
   const value = { hello: 'world' };
   res.json(value);
 });
 
-app.post('/', (req, res) => {
+app.post('/', (req: Request, res: Response) => {
   res.json({ requestName: req.body.name });
 });
 
