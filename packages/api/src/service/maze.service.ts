@@ -10,6 +10,8 @@ class MazeService {
     const maze = new Maze();
     this.repository.save(maze);
     console.debug(`Created maze with id ${maze.getId()}`);
+    console.debug(maze.toString());
+    console.debug(maze.toSolutionString());
     return maze;
   }
 
