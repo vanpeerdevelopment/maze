@@ -8,6 +8,10 @@ export class MazeError extends Error {
     return new MazeError(404, message);
   }
 
+  static badRequest(message: string = 'Bad request'): MazeError {
+    return new MazeError(400, message);
+  }
+
   static internalServerError(message: string = 'Internal server error'): MazeError {
     return new MazeError(500, message);
   }

@@ -1,6 +1,7 @@
 import { Maze } from '../domain/maze';
 import { MazeRepository } from '../repository/maze.repository';
 import { MazeId } from '../domain/maze-id';
+import { Direction } from '../domain/direction';
 
 class MazeService {
   constructor(private repository = new MazeRepository()) {}
@@ -19,6 +20,14 @@ class MazeService {
     console.debug(`Searching maze with id ${id}`);
     const maze = this.repository.find(id);
     console.debug(`Found maze with id ${id}`);
+    return maze;
+  }
+
+  move(id: MazeId, direction: Direction) {
+    console.debug(`Moving in ${direction} in maze with id ${id}`);
+    const maze = this.repository.find(id);
+    maze.move(direction);
+    console.debug(`Moved in ${direction} in maze with id ${id}`);
     return maze;
   }
 }
