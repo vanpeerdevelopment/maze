@@ -2,17 +2,20 @@ import { Maze } from '../domain/maze';
 import { MazeRepository } from '../repository/maze.repository';
 import { MazeId } from '../domain/maze-id';
 import { Direction } from '../domain/direction';
+import { MazeFactory } from '../domain/maze.factory';
 
 class MazeService {
-  constructor(private repository = new MazeRepository()) {}
+  constructor(
+    private factory = new MazeFactory(),
+    private repository = new MazeRepository(),
+  ) {}
 
   createMaze(): Maze {
     console.debug(`Creating new maze`);
-    const maze = new Maze();
+    const maze = this.factory.create();
     this.repository.save(maze);
     console.debug(`Created maze with id ${maze.getId()}`);
     console.debug(maze.toString());
-    console.debug(maze.toSolutionString());
     return maze;
   }
 

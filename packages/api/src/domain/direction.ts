@@ -1,6 +1,6 @@
 import { MazeError } from './maze-error';
 
-const directions = ['up', 'down', 'left', 'right'] as const;
+export const directions = ['up', 'down', 'left', 'right'] as const;
 
 function isDirection(direction: unknown): direction is Direction {
   return directions.indexOf(direction as Direction) != -1;
