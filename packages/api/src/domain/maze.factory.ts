@@ -33,7 +33,7 @@ export class MazeFactory {
       }
     }
 
-    return new Maze(mazeId(), mazeRows);
+    return new Maze(mazeId(), mazeRows, goldBuriedPositions.length + 2);
   }
 
   private getGoldBuryPositions(generatedMaze: GeneratedMaze): Position[] {

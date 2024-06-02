@@ -35,6 +35,15 @@ class MazeService {
     console.debug(maze.toString());
     return maze;
   }
+
+  digGold(id: MazeId): Maze {
+    console.debug(`Digging gold in maze with id ${id}`);
+    const maze = this.repository.find(id);
+    maze.digGold();
+    console.debug(`Dug gold in maze with id ${id}`);
+    console.debug(maze.toString());
+    return maze;
+  }
 }
 
 export const mazeService = new MazeService();

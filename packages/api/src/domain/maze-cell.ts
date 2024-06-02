@@ -10,6 +10,7 @@ export class MazeCell {
     private _current: boolean,
     private _visited: boolean,
     private _goldBuried: boolean,
+    private _goldFound: boolean = false,
   ) {}
 
   getPosition(): Position {
@@ -46,6 +47,18 @@ export class MazeCell {
 
   isGoldBuried(): boolean {
     return this._goldBuried;
+  }
+
+  isGoldFound(): boolean {
+    return this._goldFound;
+  }
+
+  digGold() {
+    if (!this._goldBuried) {
+      throw MazeError.badRequest('No gold buried on current position');
+    } else {
+      this._goldFound = true;
+    }
   }
 
   markCurrent() {

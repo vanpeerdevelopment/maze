@@ -25,3 +25,10 @@ mazeRouter.put('/:id/move', (req: Request, res: Response) => {
   const maze = mazeService.move(id, direction);
   res.json(MazeDto.from(maze));
 });
+
+mazeRouter.get('/:id/gold', (req: Request, res: Response) => {
+  const id = req.params.id as MazeId;
+
+  const maze = mazeService.digGold(id);
+  res.json(MazeDto.from(maze));
+});

@@ -51,8 +51,10 @@ export class MazeFormatter {
       return 'x';
     } else if (cell.isGoal()) {
       return '#';
-    } else if (cell.isGoldBuried()) {
+    } else if (cell.isGoldFound()) {
       return '$';
+    } else if (cell.isGoldBuried()) {
+      return '!';
     } else if (cell.isVisited()) {
       return 'o';
     }

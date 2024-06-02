@@ -4,10 +4,14 @@ POST {{host}}/maze
 > {% client.global.set("mazeId", response.body.id); %}
 
 ### Get the maze with id
+### 404 - when id unknown
 
 GET {{host}}/maze/{{mazeId}}
 
 ### Move in the maze with id in the requested direction
+### 400 - when direction unknown
+### 400 - when moving towards a wall
+### 400 - when already finished
 
 PUT {{host}}/maze/{{mazeId}}/move
 Content-Type: application/json
@@ -15,3 +19,13 @@ Content-Type: application/json
 {
   "direction": "down"
 }
+
+### Dig gold on current position in maze
+### 400 - when no gold burried
+### 429 - when out of gold digging attempts
+### 400 - when already finished
+
+GET {{host}}/maze/{{mazeId}}/gold
+
+### 500 - if something unexpected goes wrong
+### 400 - for unknown verb + endpoint combination

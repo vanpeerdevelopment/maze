@@ -12,6 +12,10 @@ export class MazeError extends Error {
     return new MazeError(400, message);
   }
 
+  static rateLimited(message: string = 'Too many requests') {
+    return new MazeError(429, message);
+  }
+
   static internalServerError(message: string = 'Internal server error'): MazeError {
     return new MazeError(500, message);
   }
