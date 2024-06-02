@@ -2,6 +2,7 @@ import { MazeId } from './maze-id';
 import { Direction } from './direction';
 import { MazeCell } from './maze-cell';
 import { Position } from './position';
+import { MazeFormatter } from './maze-formatter';
 
 export class Maze {
   constructor(
@@ -21,7 +22,7 @@ export class Maze {
     console.log(`Position after move row: ${this.getCurrentCell().getPosition().toString()}`);
   }
 
-  private getCurrentCell(): MazeCell {
+  getCurrentCell(): MazeCell {
     return this._mazeCells.find((cell) => cell.isCurrent())!;
   }
 
@@ -30,6 +31,6 @@ export class Maze {
   }
 
   toString() {
-    return 'TODO';
+    return new MazeFormatter(this._mazeCells).toString();
   }
 }

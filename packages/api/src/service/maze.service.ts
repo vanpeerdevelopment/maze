@@ -23,6 +23,7 @@ class MazeService {
     console.debug(`Searching maze with id ${id}`);
     const maze = this.repository.find(id);
     console.debug(`Found maze with id ${id}`);
+    console.debug(maze.toString());
     return maze;
   }
 
@@ -31,6 +32,7 @@ class MazeService {
     const maze = this.repository.find(id);
     maze.move(direction);
     console.debug(`Moved in ${direction} in maze with id ${id}`);
+    console.debug(maze.toString());
     return maze;
   }
 }

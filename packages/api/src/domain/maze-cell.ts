@@ -9,6 +9,7 @@ export class MazeCell {
     private readonly _goal: boolean,
     private _current: boolean,
     private _visited: boolean,
+    private _goldBuried: boolean,
   ) {}
 
   getPosition(): Position {
@@ -37,6 +38,14 @@ export class MazeCell {
 
   isCurrent(): boolean {
     return this._current;
+  }
+
+  isVisited(): boolean {
+    return this._visited;
+  }
+
+  isGoldBuried(): boolean {
+    return this._goldBuried;
   }
 
   markCurrent() {
