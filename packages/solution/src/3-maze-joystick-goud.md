@@ -1,38 +1,11 @@
+```http request
 ### Create a new maze
 ### 200 OK - success response
 ### {
 ###   "id": "98525427-d369-4bde-8fb8-ea03363d2e7c",
-###   "standingOnGold": false,
-###   "numberOfGoldBuried": 5,
-###   "numberOfGoldFound": 0,
-###   "goldDiggingAttemptsLeft": 7,
-###   "finished": false
 ### }
 
 POST {{apiBaseUrl}}/maze
-
-> {% client.global.set("mazeId", response.body.id); %}
-
-
-
-### Get the maze with id
-### 200 OK - success response
-### {
-###   "id": "98525427-d369-4bde-8fb8-ea03363d2e7c",
-###   "standingOnGold": false,
-###   "numberOfGoldBuried": 5,
-###   "numberOfGoldFound": 0,
-###   "goldDiggingAttemptsLeft": 7,
-###   "finished": false
-### }
-###
-### 404 Not Found - error response
-### {
-###   "errorId": "3fffd7d3-465e-45ef-a84d-9d04e5846fed",
-###   "errorMessage": "Could not find maze with id 123"
-### }
-
-GET {{apiBaseUrl}}/maze/{{mazeId}}
 
 
 
@@ -40,11 +13,7 @@ GET {{apiBaseUrl}}/maze/{{mazeId}}
 ### Request: geldige directions: up, down, left, right
 ### 200 OK - success response
 ### {
-###   "id": "98525427-d369-4bde-8fb8-ea03363d2e7c",
 ###   "standingOnGold": false,
-###   "numberOfGoldBuried": 5,
-###   "numberOfGoldFound": 0,
-###   "goldDiggingAttemptsLeft": 7,
 ###   "finished": false
 ### }
 ###
@@ -55,7 +24,6 @@ GET {{apiBaseUrl}}/maze/{{mazeId}}
 ### }
 
 PUT {{apiBaseUrl}}/maze/{{mazeId}}/move
-Content-Type: application/json
 
 {
   "direction": "up"
@@ -66,11 +34,6 @@ Content-Type: application/json
 ### Dig gold on current position in maze
 ### 200 OK - success response
 ### {
-###   "id": "98525427-d369-4bde-8fb8-ea03363d2e7c",
-###   "standingOnGold": true,
-###   "numberOfGoldBuried": 5,
-###   "numberOfGoldFound": 1,
-###   "goldDiggingAttemptsLeft": 6,
 ###   "finished": false
 ### }
 ###
@@ -87,3 +50,4 @@ Content-Type: application/json
 ### }
 
 GET {{apiBaseUrl}}/maze/{{mazeId}}/gold
+```
