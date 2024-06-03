@@ -1,31 +1,88 @@
 ### Create a new maze
+### 200 OK - success response
+### {
+###   "id": "98525427-d369-4bde-8fb8-ea03363d2e7c",
+###   "standingOnGold": false,
+###   "numberOfGoldBuried": 5,
+###   "numberOfGoldFound": 0,
+###   "goldDiggingAttemptsLeft": 7,
+###   "finished": false
+### }
+
 POST {{host}}/maze
 
 > {% client.global.set("mazeId", response.body.id); %}
 
+
+
 ### Get the maze with id
-### 404 - when id unknown
+### 200 OK - success response
+### {
+###   "id": "98525427-d369-4bde-8fb8-ea03363d2e7c",
+###   "standingOnGold": false,
+###   "numberOfGoldBuried": 5,
+###   "numberOfGoldFound": 0,
+###   "goldDiggingAttemptsLeft": 7,
+###   "finished": false
+### }
+###
+### 404 Not Found - error response
+### {
+###   "errorId": "3fffd7d3-465e-45ef-a84d-9d04e5846fed",
+###   "errorMessage": "Could not find maze with id 123"
+### }
 
 GET {{host}}/maze/{{mazeId}}
 
+
+
 ### Move in the maze with id in the requested direction
-### 400 - when direction unknown
-### 400 - when moving towards a wall
-### 400 - when already finished
+### 200 OK - success response
+### {
+###   "id": "98525427-d369-4bde-8fb8-ea03363d2e7c",
+###   "standingOnGold": false,
+###   "numberOfGoldBuried": 5,
+###   "numberOfGoldFound": 0,
+###   "goldDiggingAttemptsLeft": 7,
+###   "finished": false
+### }
+###
+### 400 Bad Request - error response: when direction unknown, when moving towards a wall, when already finished
+### {
+###   "errorId": "49a9ce29-87f2-488b-9270-0f4f3066154c",
+###   "errorMessage": "Can not move down because there is a wall"
+### }
 
 PUT {{host}}/maze/{{mazeId}}/move
 Content-Type: application/json
 
 {
-  "direction": "down"
+  "direction": "up"
 }
 
+
+
 ### Dig gold on current position in maze
-### 400 - when no gold burried
-### 429 - when out of gold digging attempts
-### 400 - when already finished
+### 200 OK - success response
+### {
+###   "id": "98525427-d369-4bde-8fb8-ea03363d2e7c",
+###   "standingOnGold": true,
+###   "numberOfGoldBuried": 5,
+###   "numberOfGoldFound": 1,
+###   "goldDiggingAttemptsLeft": 6,
+###   "finished": false
+### }
+###
+### 400 Bad Request - error response: when no gold burried, when already finished
+### {
+###   "errorId": "929add64-e82d-4bfa-b81e-fdf724d71ed2",
+###   "errorMessage": "No gold buried on current position"
+### }
+###
+### 429 Too Many Requests - error response: when out of gold digging attempts
+### {
+###   "errorId": "4c94650d-6657-4b8c-bc94-b390060d9792",
+###   "errorMessage": "No gold digging attempts left"
+### }
 
 GET {{host}}/maze/{{mazeId}}/gold
-
-### 500 - if something unexpected goes wrong
-### 400 - for unknown verb + endpoint combination
