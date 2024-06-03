@@ -13,8 +13,8 @@ def maak_maze(api_base_url):
 def beweeg_in_maze(api_base_url, maze_id, richting):
     endpoint = "/maze/" + maze_id + "/move"
     api_url = api_base_url + endpoint
-    request = {"direction": richting}
-    response = requests.put(api_url, json=request)
+    request_body = {"direction": richting}
+    response = requests.put(api_url, json=request_body)
     response_dictionary = response.json()
     if response.status_code == 200:
         finished = response_dictionary["finished"]
