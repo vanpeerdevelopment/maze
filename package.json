@@ -7,6 +7,8 @@
     "build": "pnpm -r --include-workspace-root build",
     "prettier:check": "prettier --check .",
     "prettier:run": "prettier --write .",
+    "ssh:maze:root": "ssh root@maze.zavo.academy",
+    "ssh:maze:nodejs": "ssh nodejs@maze.zavo.academy",
     "pm2:provision": "pm2 deploy pm2.config.js production setup",
     "pm2:deploy": "pm2 deploy pm2.config.js production"
   },
