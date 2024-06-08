@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "main": "src/app.ts",
   "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "pnpm clean",
     "build": "tsc",
     "start": "node dist/app.js",
     "dev": "ts-node src/app.ts"
