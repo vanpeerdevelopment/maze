@@ -5,9 +5,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/app.js",
-    "dev": "ts-node src/app.ts",
-    "pm2:provision": "pm2 deploy pm2.config.js production setup",
-    "pm2:deploy": "pm2 deploy pm2.config.js production"
+    "dev": "ts-node src/app.ts"
   },
   "dependencies": {
     "express": "4.19.2",
@@ -19,7 +17,6 @@
     "@types/node": "20.12.12",
     "@types/uuid": "9.0.8",
     "ts-node": "10.9.2",
-    "typescript": "5.4.5",
-    "pm2": "5.4.0"
+    "typescript": "5.4.5"
   }
 }

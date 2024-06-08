@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      pm2:
+        specifier: 5.4.0
+        version: 5.4.0
       prettier:
         specifier: 3.2.5
         version: 3.2.5
@@ -33,9 +36,6 @@ importers:
       '@types/uuid':
         specifier: 9.0.8
         version: 9.0.8
-      pm2:
-        specifier: 5.4.0
-        version: 5.4.0
       ts-node:
         specifier: 10.9.2
         version: 10.9.2(@types/node@20.12.12)(typescript@5.4.5)

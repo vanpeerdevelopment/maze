@@ -18,7 +18,6 @@ module.exports = {
   deploy: {
     production: {
       user: 'nodejs',
-      key: '$HOME/.ssh/maze.pub',
       host: 'maze.zavo.academy',
       ref: 'origin/main',
       repo: 'https://github.com/vanpeerdevelopment/maze.git',
