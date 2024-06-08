@@ -21,7 +21,7 @@ module.exports = {
       key: '$HOME/.ssh/maze.pub',
       host: 'maze.zavo.academy',
       ref: 'origin/main',
-      repo: 'git@github.com:vanpeerdevelopment/maze.git',
+      repo: 'https://github.com/vanpeerdevelopment/maze.git',
       path: '/home/nodejs/maze',
     },
   },

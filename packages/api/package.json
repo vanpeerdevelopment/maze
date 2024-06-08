@@ -6,8 +6,8 @@
     "build": "tsc",
     "start": "node dist/app.js",
     "dev": "ts-node src/app.ts",
-    "pm2:provision": "pm2 deploy production setup",
-    "pm2:deploy": "pm2 deploy production"
+    "pm2:provision": "pm2 deploy pm2.config.js production setup",
+    "pm2:deploy": "pm2 deploy pm2.config.js production"
   },
   "dependencies": {
     "express": "4.19.2",
