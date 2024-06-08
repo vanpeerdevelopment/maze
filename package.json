@@ -8,8 +8,7 @@
     "prettier:check": "prettier --check .",
     "prettier:run": "prettier --write .",
     "pm2:provision": "pm2 deploy pm2.config.js production setup",
-    "pm2:deploy": "pm2 deploy pm2.config.js production",
-    "pm2:update": "pm2 deploy pm2.config.js production update"
+    "pm2:deploy": "pm2 deploy pm2.config.js production"
   },
   "devDependencies": {
     "prettier": "3.2.5",
