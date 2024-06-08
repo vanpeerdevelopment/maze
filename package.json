@@ -1,6 +1,7 @@
 {
   "name": "maze",
   "version": "0.0.0",
+  "packageManager": "pnpm@9.2.0",
   "scripts": {
     "prebuild": "pnpm prettier:check",
     "build": "pnpm -r --include-workspace-root build",

@@ -3,7 +3,7 @@ import { mazePath, mazeRouter } from './resource/maze.resource';
 import { catchAll, errorHandler } from './resource/maze.error-handler';
 
 const app: Express = express();
-const port = process.env.PORT || 3000;
+const port = process.env.MAZE_PORT || 3000;
 
 app.use(express.json());
 app.use(mazePath, mazeRouter);
