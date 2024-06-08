@@ -22,7 +22,7 @@ module.exports = {
       ref: 'origin/main',
       repo: 'https://github.com/vanpeerdevelopment/maze.git',
       path: '/home/nodejs/maze',
-      'post-deploy': 'pnpm install && pnpm build',
+      'post-deploy': 'pnpm install && pnpm build && pm2 startOrRestart pm2.config.json',
     },
   },
 };
