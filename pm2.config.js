@@ -7,7 +7,7 @@ module.exports = {
     {
       name: 'maze',
       interpreter: '/usr/bin/node',
-      cwd: '/home/nodejs/maze/packages/api',
+      cwd: '/home/nodejs/maze/current/packages/api',
       script: './dist/app.js',
       env: {
         NODE_ENV: 'production',
