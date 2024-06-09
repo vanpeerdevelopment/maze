@@ -5,8 +5,8 @@ import { MazeCell } from './maze-cell';
 import { directions } from './direction';
 import { Position } from './position';
 
-const WIDTH = 10;
-const HEIGHT = 10;
+const WIDTH = 5;
+const HEIGHT = 5;
 const START: Position = new Position(0, 0);
 const GOAL: Position = new Position(HEIGHT - 1, WIDTH - 1);
 
