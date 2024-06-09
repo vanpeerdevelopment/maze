@@ -29,7 +29,7 @@ Walk through a randomly generated maze using a REST api
     - Example hello application
 13. Setup ssl using certbot and letsencrypt as root user following [this guide](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04).
 14. Stop and remove the hello application from PM2: `pm2 delete hello && pm2 save`
-15. Provision maze repo on droplet: `pnpm pm2:provision`
+15. Provision maze repo on droplet: `pnpm pm2:deploy:provision`
 16. Deploy latest maze on droplet: `pnpm pm2:deploy`
 17. After first deploy login using ssh and run `pm2 save`
 
