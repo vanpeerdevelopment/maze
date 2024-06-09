@@ -11,7 +11,7 @@ def maak_maze(api_base_url):
 
 
 # Hoofdprogramma
-api_base_url = "http://localhost:3000"
+api_base_url = "https://maze.zavo.academy"
 
 maze_id = maak_maze(api_base_url)
 print(maze_id)
