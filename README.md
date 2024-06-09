@@ -13,7 +13,7 @@ Walk through a randomly generated maze using a REST api
 5. Improved metrics
 6. Name: maze
 7. Tags: maze, zavo
-8. Setup IPv4 and IPv6 DNS for maze.zavo.academy
+8. Setup IPv4 (and IPv6: was not working with python request module) DNS for maze.zavo.academy
 9. Login using ssh: `ssh -i ~/.ssh/maze root@maze.zavo.academy`
 10. `corepack enable pnpm`
 11. Grant ssh access to nodejs user
