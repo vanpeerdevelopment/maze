@@ -27,6 +27,13 @@ class MazeService {
     return maze;
   }
 
+  findAll(): Maze[] {
+    console.debug(`Searching all mazes`);
+    const mazes = this.repository.findAll();
+    console.debug(`Found ${mazes.length} mazes`);
+    return mazes;
+  }
+
   move(id: MazeId, direction: Direction) {
     console.debug(`Moving in ${direction} in maze with id ${id}`);
     const maze = this.repository.find(id);

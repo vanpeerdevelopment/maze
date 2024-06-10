@@ -14,6 +14,23 @@ POST {{apiBaseUrl}}/maze
 > {% client.global.set("mazeId", response.body.id); %}
 
 
+### Get all mazes
+### 200 OK - success response
+### {
+###   "mazes": [
+###     {
+###       "id": "99aabc62-3e39-4adc-be44-cdf6987ee774",
+###       ...
+###     },
+###     {
+###       "id": "cdd71336-cde9-41b6-a47c-b70cb4ff7aca",
+###       ...
+###     }
+###   ]
+### }
+
+GET {{apiBaseUrl}}/maze
+
 
 ### Get the maze with id
 ### 200 OK - success response

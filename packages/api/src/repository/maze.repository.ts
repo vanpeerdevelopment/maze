@@ -17,4 +17,8 @@ export class MazeRepository {
       throw MazeError.notFound(`Could not find maze with id ${id}`);
     }
   }
+
+  findAll(): Maze[] {
+    return Object.values(this.store);
+  }
 }

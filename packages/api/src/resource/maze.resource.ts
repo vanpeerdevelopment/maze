@@ -12,6 +12,11 @@ mazeRouter.post('', (_req: Request, res: Response) => {
   res.json(MazeDto.from(maze));
 });
 
+mazeRouter.get('', (_req: Request, res: Response) => {
+  const mazes = mazeService.findAll();
+  res.json({ mazes: mazes.map((maze) => MazeDto.from(maze)) });
+});
+
 mazeRouter.get('/:id', (req: Request, res: Response) => {
   const id = req.params.id as MazeId;
   const maze = mazeService.find(id);
