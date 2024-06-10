@@ -3,11 +3,13 @@ import { Observable } from 'rxjs';
 import { MazeDto } from 'maze-dto';
 import { AsyncPipe } from '@angular/common';
 import { MazeService } from '../maze.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, RouterLink],
   template: `
+    <button routerLink="/overview">⬅️</button>
     @if (maze$ | async; as maze) {
       <div>Maze detail: {{ maze.id }}</div>
     }

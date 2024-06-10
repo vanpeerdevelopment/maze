@@ -15,4 +15,8 @@ export class MazeService {
   getMaze(mazeId: string): Observable<MazeDto> {
     return this.http.get<MazeDto>(`${this.base}/${mazeId}`);
   }
+
+  deleteMaze(mazeId: string): Observable<void> {
+    return this.http.delete<void>(`${this.base}/${mazeId}`);
+  }
 }
