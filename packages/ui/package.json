@@ -2,9 +2,10 @@
   "name": "maze-ui",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "clean": "rm -rf dist",
+    "prebuild": "pnpm clean",
     "build": "ng build",
+    "dev": "ng serve",
     "watch": "ng build --watch --configuration development"
   },
   "private": true,

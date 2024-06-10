@@ -32,11 +32,3 @@ Walk through a randomly generated maze using a REST api
 15. Provision maze repo on droplet: `pnpm pm2:deploy:provision`
 16. Deploy latest maze on droplet: `pnpm pm2:deploy`
 17. After first deploy login using ssh and run `pm2 save`
-
-## TODO
-
-- Static files:
-  - https://expressjs.com/en/starter/static-files.html
-  - https://expressjs.com/en/resources/middleware/serve-static.html
-  - https://expressjs.com/en/resources/middleware/serve-index.html
-  - https://expressjs.com/en/resources/middleware/serve-favicon.html

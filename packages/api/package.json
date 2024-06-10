@@ -6,13 +6,15 @@
     "clean": "rm -rf dist",
     "prebuild": "pnpm clean",
     "build": "tsc",
+    "postbuild": "cp -r ./node_modules/maze-ui/dist/maze-ui/browser ./dist/ui",
     "start": "node dist/app.js",
     "dev": "ts-node src/app.ts"
   },
   "dependencies": {
     "express": "4.19.2",
     "uuid": "9.0.1",
-    "maze-generation": "3.1.2"
+    "maze-generation": "3.1.2",
+    "maze-ui": "workspace:*"
   },
   "devDependencies": {
     "@types/express": "4.17.21",
