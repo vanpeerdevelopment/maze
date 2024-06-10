@@ -4,7 +4,7 @@ import { MazeDto } from 'maze-dto';
 import { AsyncPipe, JsonPipe } from '@angular/common';
 import { MazeService } from '../maze.service';
 import { RouterLink } from '@angular/router';
-import MazeComponent from '../component/maze-component';
+import MazeComponent from '../component/maze.component';
 
 @Component({
   standalone: true,

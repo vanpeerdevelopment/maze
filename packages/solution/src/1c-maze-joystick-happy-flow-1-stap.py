@@ -21,6 +21,7 @@ def beweeg_in_maze(api_base_url, maze_id, richting):
 api_base_url = "https://maze.zavo.academy"
 
 maze_id = maak_maze(api_base_url)
+print('Open je browser en ga naar https://maze.zavo.academy/detail/' + maze_id)
 input_gebruiker = input('In welke richting wil je bewegeen: z = ⬆️, s = ⬇️, q = ⬅️, d = ➡️?')
 if input_gebruiker == 'z':
     beweeg_in_maze(api_base_url, maze_id, 'up')
