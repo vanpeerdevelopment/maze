@@ -49,50 +49,50 @@ importers:
   packages/ui:
     dependencies:
       '@angular/animations':
-        specifier: ^18.0.0
+        specifier: 18.0.2
         version: 18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))
       '@angular/common':
-        specifier: ^18.0.0
+        specifier: 18.0.2
         version: 18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))(rxjs@7.8.1)
       '@angular/compiler':
-        specifier: ^18.0.0
+        specifier: 18.0.2
         version: 18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))
       '@angular/core':
-        specifier: ^18.0.0
+        specifier: 18.0.2
         version: 18.0.2(rxjs@7.8.1)(zone.js@0.14.7)
       '@angular/forms':
-        specifier: ^18.0.0
+        specifier: 18.0.2
         version: 18.0.2(@angular/common@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))(rxjs@7.8.1))(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))(@angular/platform-browser@18.0.2(@angular/animations@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7)))(@angular/common@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))(rxjs@7.8.1))(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7)))(rxjs@7.8.1)
       '@angular/platform-browser':
-        specifier: ^18.0.0
+        specifier: 18.0.2
         version: 18.0.2(@angular/animations@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7)))(@angular/common@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))(rxjs@7.8.1))(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))
       '@angular/platform-browser-dynamic':
-        specifier: ^18.0.0
+        specifier: 18.0.2
         version: 18.0.2(@angular/common@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))(rxjs@7.8.1))(@angular/compiler@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7)))(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))(@angular/platform-browser@18.0.2(@angular/animations@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7)))(@angular/common@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))(rxjs@7.8.1))(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7)))
       '@angular/router':
-        specifier: ^18.0.0
+        specifier: 18.0.2
         version: 18.0.2(@angular/common@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))(rxjs@7.8.1))(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))(@angular/platform-browser@18.0.2(@angular/animations@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7)))(@angular/common@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7))(rxjs@7.8.1))(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7)))(rxjs@7.8.1)
       rxjs:
-        specifier: ~7.8.0
+        specifier: 7.8.1
         version: 7.8.1
       tslib:
-        specifier: ^2.3.0
+        specifier: 2.6.3
         version: 2.6.3
       zone.js:
-        specifier: ~0.14.3
+        specifier: 0.14.7
         version: 0.14.7
     devDependencies:
       '@angular-devkit/build-angular':
-        specifier: ^18.0.3
+        specifier: 18.0.3
         version: 18.0.3(@angular/compiler-cli@18.0.2(@angular/compiler@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7)))(typescript@5.4.5))(@types/node@20.12.12)(chokidar@3.6.0)(typescript@5.4.5)
       '@angular/cli':
-        specifier: ^18.0.3
+        specifier: 18.0.3
         version: 18.0.3(chokidar@3.6.0)
       '@angular/compiler-cli':
-        specifier: ^18.0.0
+        specifier: 18.0.2
         version: 18.0.2(@angular/compiler@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7)))(typescript@5.4.5)
       typescript:
-        specifier: ~5.4.2
+        specifier: 5.4.5
         version: 5.4.5
 
 packages:
@@ -4586,7 +4586,7 @@ snapshots:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@babel/code-frame': 7.24.7
-      '@babel/generator': 7.24.5
+      '@babel/generator': 7.24.7
       '@babel/helper-compilation-targets': 7.24.7
       '@babel/helper-module-transforms': 7.24.7(@babel/core@7.24.5)
       '@babel/helpers': 7.24.7
