@@ -6,12 +6,9 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   template: `
-    <h1>Welcome to {{ title }}!</h1>
-
+    <h1>Welcome to maze!</h1>
     <router-outlet />
   `,
   styles: [],
 })
-export class AppComponent {
-  title = 'maze-ui';
-}
+export class AppComponent {}
