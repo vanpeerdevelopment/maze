@@ -1,0 +1,14 @@
+{
+  "name": "maze-dto",
+  "version": "0.0.0",
+  "types": "./dist/main.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "pnpm clean",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.12",
+    "typescript": "5.4.5"
+  }
+}

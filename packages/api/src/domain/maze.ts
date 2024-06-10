@@ -4,6 +4,7 @@ import { MazeCell } from './maze-cell';
 import { Position } from './position';
 import { MazeFormatter } from './maze-formatter';
 import { MazeError } from './maze-error';
+import { MazeDto } from 'maze-dto';
 
 export class Maze {
   constructor(
@@ -71,5 +72,16 @@ export class Maze {
 
   private getCell(position: Position): MazeCell {
     return this._mazeCells.find((cell) => cell.hasPosition(position))!;
+  }
+
+  toDto(): MazeDto {
+    return {
+      id: this.getId(),
+      standingOnGold: this.getCurrentCell().isGoldBuried(),
+      numberOfGoldBuried: this.getNumberOfGoldBuried(),
+      numberOfGoldFound: this.getNumberOfGoldFound(),
+      goldDiggingAttemptsLeft: this.getGoldDiggingAttemptsLeft(),
+      finished: this.isFinished(),
+    };
   }
 }

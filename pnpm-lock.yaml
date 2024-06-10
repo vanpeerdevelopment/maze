@@ -39,9 +39,21 @@ importers:
       '@types/uuid':
         specifier: 9.0.8
         version: 9.0.8
+      maze-dto:
+        specifier: workspace:*
+        version: link:../dto
       ts-node:
         specifier: 10.9.2
         version: 10.9.2(@types/node@20.12.12)(typescript@5.4.5)
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+
+  packages/dto:
+    devDependencies:
+      '@types/node':
+        specifier: 20.12.12
+        version: 20.12.12
       typescript:
         specifier: 5.4.5
         version: 5.4.5
@@ -91,6 +103,9 @@ importers:
       '@angular/compiler-cli':
         specifier: 18.0.2
         version: 18.0.2(@angular/compiler@18.0.2(@angular/core@18.0.2(rxjs@7.8.1)(zone.js@0.14.7)))(typescript@5.4.5)
+      maze-dto:
+        specifier: workspace:*
+        version: link:../dto
       typescript:
         specifier: 5.4.5
         version: 5.4.5

@@ -17,6 +17,7 @@
     "maze-ui": "workspace:*"
   },
   "devDependencies": {
+    "maze-dto": "workspace:*",
     "@types/express": "4.17.21",
     "@types/node": "20.12.12",
     "@types/uuid": "9.0.8",
