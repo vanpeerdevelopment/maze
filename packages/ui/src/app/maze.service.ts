@@ -11,4 +11,8 @@ export class MazeService {
   getMazes(): Observable<MazeDto[]> {
     return this.http.get<{ mazes: MazeDto[] }>(this.base).pipe(map((response) => response.mazes));
   }
+
+  getMaze(mazeId: string): Observable<MazeDto> {
+    return this.http.get<MazeDto>(`${this.base}/${mazeId}`);
+  }
 }
