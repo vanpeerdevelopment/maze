@@ -12,6 +12,12 @@ mazeRouter.post('', (_req: Request, res: Response) => {
   res.json(MazeDto.from(maze));
 });
 
+mazeRouter.delete('/:id', (req: Request, res: Response) => {
+  const id = req.params.id as MazeId;
+  mazeService.deleteMaze(id);
+  res.status(204).send();
+});
+
 mazeRouter.get('', (_req: Request, res: Response) => {
   const mazes = mazeService.findAll();
   res.json({ mazes: mazes.map((maze) => MazeDto.from(maze)) });

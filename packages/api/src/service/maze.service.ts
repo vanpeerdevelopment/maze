@@ -19,6 +19,12 @@ class MazeService {
     return maze;
   }
 
+  deleteMaze(id: MazeId): void {
+    console.debug(`Deleting maze with id ${id}`);
+    this.repository.delete(id);
+    console.debug(`Deleted maze with id ${id}`);
+  }
+
   find(id: MazeId): Maze {
     console.debug(`Searching maze with id ${id}`);
     const maze = this.repository.find(id);

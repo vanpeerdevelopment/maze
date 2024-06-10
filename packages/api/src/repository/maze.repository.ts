@@ -9,6 +9,10 @@ export class MazeRepository {
     this.store[maze.getId()] = maze;
   }
 
+  delete(id: MazeId): void {
+    delete this.store[id];
+  }
+
   find(id: MazeId): Maze {
     const maze = this.store[id];
     if (!!maze) {

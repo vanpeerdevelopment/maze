@@ -14,6 +14,14 @@ POST {{apiBaseUrl}}/maze
 > {% client.global.set("mazeId", response.body.id); %}
 
 
+
+### Delete the maze with id
+### 204 No Content - success response
+
+DELETE {{apiBaseUrl}}/maze/{{mazeId}}
+
+
+
 ### Get all mazes
 ### 200 OK - success response
 ### {
@@ -30,6 +38,7 @@ POST {{apiBaseUrl}}/maze
 ### }
 
 GET {{apiBaseUrl}}/maze
+
 
 
 ### Get the maze with id
