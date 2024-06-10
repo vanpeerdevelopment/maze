@@ -4,15 +4,16 @@ import { MazeDto } from 'maze-dto';
 import { AsyncPipe } from '@angular/common';
 import { MazeService } from '../maze.service';
 import { Router } from '@angular/router';
+import { MazeFinishedPipe } from '../component/maze-finished.pipe';
 
 @Component({
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, MazeFinishedPipe],
   template: `
     @for (maze of mazes$ | async; track maze.id) {
       <div>
-        <span
-          >Maze {{ maze.id }}
+        <span>
+          {{ maze | mzMazeFinished }} Maze {{ maze.id }}
           <button (click)="goToDetail(maze.id)">👀</button>
           <button (click)="delete(maze.id)">🗑️</button></span
         >
