@@ -17,6 +17,8 @@ import { Router } from '@angular/router';
           <button (click)="delete(maze.id)">🗑️</button></span
         >
       </div>
+    } @empty {
+      <div>No mazes created yet</div>
     }
   `,
   styles: [],

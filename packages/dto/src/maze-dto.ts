@@ -1,8 +1,10 @@
+import { MazeCellDto } from './maze-cell-dto';
+
 export interface MazeDto {
   id: string;
-  standingOnGold: boolean;
   numberOfGoldBuried: number;
   numberOfGoldFound: number;
   goldDiggingAttemptsLeft: number;
   finished: boolean;
+  rows: MazeCellDto[][];
 }

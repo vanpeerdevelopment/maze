@@ -1,6 +1,7 @@
 import { Direction } from './direction';
 import { Position } from './position';
 import { MazeError } from './maze-error';
+import { MazeCellDto } from 'maze-dto;
 
 export class MazeCell {
   constructor(
@@ -68,5 +69,20 @@ export class MazeCell {
   markVisited() {
     this._visited = true;
     this._current = false;
+  }
+
+  toDto(): MazeCellDto {
+    return {
+      row: this._position.row,
+      column: this._position.column,
+      goal: this._goal,
+      current: this._current,
+      visited: this._visited,
+      goldFound: this._goldFound,
+      wallLeft: this._walls.includes('left'),
+      wallRight: this._walls.includes('right'),
+      wallUp: this._walls.includes('up'),
+      wallDown: this._walls.includes('down'),
+    };
   }
 }

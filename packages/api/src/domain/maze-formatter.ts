@@ -1,18 +1,19 @@
 import { MazeCell } from './maze-cell';
+import { Maze } from './maze';
 
 export class MazeFormatter {
-  constructor(private _mazeCells: MazeCell[]) {}
+  constructor(private maze: Maze) {}
 
   toString(): string {
     let result: string = '';
-    for (let rowIndex = 0; rowIndex < this.numberOfRows(); rowIndex++) {
+    for (let rowIndex = 0; rowIndex < this.maze.numberOfRows(); rowIndex++) {
       result += this.rowToString(rowIndex);
     }
     return result;
   }
 
   private rowToString(rowIndex: number) {
-    const row = this.getRow(rowIndex);
+    const row = this.maze.getRow(rowIndex);
     let result = '';
     if (rowIndex === 0) {
       result += `${this.rowHeaderToString(row)}\n`;
@@ -71,16 +72,5 @@ export class MazeFormatter {
       result += '·';
     }
     return result;
-  }
-
-  private numberOfRows(): number {
-    const rowIndexes = this._mazeCells.map((cell) => cell.getPosition().row);
-    return Math.max(...rowIndexes) + 1;
-  }
-
-  private getRow(index: number): MazeCell[] {
-    return this._mazeCells
-      .filter((cell) => cell.getPosition().row === index)
-      .sort((cell1, cell2) => cell1.getPosition().column - cell2.getPosition().column);
   }
 }

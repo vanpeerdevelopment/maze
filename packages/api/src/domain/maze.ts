@@ -4,7 +4,7 @@ import { MazeCell } from './maze-cell';
 import { Position } from './position';
 import { MazeFormatter } from './maze-formatter';
 import { MazeError } from './maze-error';
-import { MazeDto } from 'maze-dto';
+import { MazeCellDto, MazeDto } from 'maze-dto';
 
 export class Maze {
   constructor(
@@ -66,8 +66,19 @@ export class Maze {
     return this._finished;
   }
 
+  numberOfRows(): number {
+    const rowIndexes = this._mazeCells.map((cell) => cell.getPosition().row);
+    return Math.max(...rowIndexes) + 1;
+  }
+
+  getRow(index: number): MazeCell[] {
+    return this._mazeCells
+      .filter((cell) => cell.getPosition().row === index)
+      .sort((cell1, cell2) => cell1.getPosition().column - cell2.getPosition().column);
+  }
+
   toString() {
-    return new MazeFormatter(this._mazeCells).toString();
+    return new MazeFormatter(this).toString();
   }
 
   private getCell(position: Position): MazeCell {
@@ -75,13 +86,18 @@ export class Maze {
   }
 
   toDto(): MazeDto {
+    const rows: MazeCellDto[][] = [];
+    for (let rowIndex = 0; rowIndex < this.numberOfRows(); rowIndex++) {
+      rows.push(this.getRow(rowIndex).map((cell) => cell.toDto()));
+    }
+
     return {
       id: this.getId(),
-      standingOnGold: this.getCurrentCell().isGoldBuried(),
       numberOfGoldBuried: this.getNumberOfGoldBuried(),
       numberOfGoldFound: this.getNumberOfGoldFound(),
       goldDiggingAttemptsLeft: this.getGoldDiggingAttemptsLeft(),
       finished: this.isFinished(),
+      rows: rows,
     };
   }
 }
