@@ -1,7 +1,7 @@
 import { Direction } from './direction';
 import { Position } from './position';
 import { MazeError } from './maze-error';
-import { MazeCellDto } from 'maze-dto;
+import { MazeCellDto } from 'maze-dto';
 
 export class MazeCell {
   constructor(
