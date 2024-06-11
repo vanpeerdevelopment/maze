@@ -1,11 +1,11 @@
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MazeDto } from 'maze-dto';
 import { AsyncPipe, DatePipe, JsonPipe } from '@angular/common';
 import { MazeService } from '../maze.service';
 import { RouterLink } from '@angular/router';
 import MazeComponent from '../component/maze.component';
-import MazeMetadataComponent from '../component/maze-metadata.component.ts';
+import MazeMetadataComponent from '../component/maze-metadata.component';
 
 @Component({
   standalone: true,
@@ -13,12 +13,21 @@ import MazeMetadataComponent from '../component/maze-metadata.component.ts';
   template: `
     <button routerLink="/overview">⬅️</button>
     @if (maze$ | async; as maze) {
-      <h1>Maze</h1>
-      <mz-maze-metadata [maze]="maze" />
-      <mz-maze [maze]="maze" />
+      <div class="maze">
+        <mz-maze [maze]="maze" />
+        <mz-maze-metadata [maze]="maze" />
+      </div>
     }
   `,
-  styles: [],
+  styles: [
+    `
+      .maze {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+      }
+    `,
+  ],
 })
 export default class MazeDetailPage {
   private mazeService: MazeService = inject(MazeService);

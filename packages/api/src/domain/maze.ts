@@ -101,6 +101,7 @@ export class Maze {
       numberOfGoldBuried: this.getNumberOfGoldBuried(),
       numberOfGoldFound: this.getNumberOfGoldFound(),
       goldDiggingAttemptsLeft: this.getGoldDiggingAttemptsLeft(),
+      standingOnGold: this.getCurrentCell().isGoldBuried(),
       finished: this.isFinished(),
       createdAt: this.getCreatedAt(),
       rows: rows,

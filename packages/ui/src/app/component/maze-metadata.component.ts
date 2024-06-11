@@ -13,7 +13,13 @@ import { MazeBooleanPipe } from './maze-boolean.pipe';
     <li>⚜️ goud: {{ maze.numberOfGoldFound }} / {{ maze.numberOfGoldBuried }}</li>
     <li>⛏️ graafpogingen over: {{ maze.goldDiggingAttemptsLeft }}</li>
   </ul>`,
-  styles: [],
+  styles: [
+    `
+      ul {
+        margin: 0;
+      }
+    `,
+  ],
   imports: [DatePipe, MazeBooleanPipe],
 })
 export default class MazeMetadataComponent {

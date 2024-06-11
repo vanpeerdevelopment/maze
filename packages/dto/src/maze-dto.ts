@@ -5,6 +5,7 @@ export interface MazeDto {
   numberOfGoldBuried: number;
   numberOfGoldFound: number;
   goldDiggingAttemptsLeft: number;
+  standingOnGold: boolean;
   finished: boolean;
   createdAt: Date;
   rows: MazeCellDto[][];
