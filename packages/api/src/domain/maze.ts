@@ -12,6 +12,7 @@ export class Maze {
     private _mazeCells: MazeCell[],
     private _goldDiggingAttemptsLeft: number,
     private _finished: boolean = false,
+    private _createdAt: Date = new Date(),
   ) {}
 
   getId(): MazeId {
@@ -62,8 +63,12 @@ export class Maze {
     }
   }
 
-  isFinished() {
+  isFinished(): boolean {
     return this._finished;
+  }
+
+  getCreatedAt(): Date {
+    return this._createdAt;
   }
 
   numberOfRows(): number {
@@ -97,6 +102,7 @@ export class Maze {
       numberOfGoldFound: this.getNumberOfGoldFound(),
       goldDiggingAttemptsLeft: this.getGoldDiggingAttemptsLeft(),
       finished: this.isFinished(),
+      createdAt: this.getCreatedAt(),
       rows: rows,
     };
   }

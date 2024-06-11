@@ -1,19 +1,19 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Observable, ReplaySubject, Subject } from 'rxjs';
 import { MazeDto } from 'maze-dto';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, DatePipe } from '@angular/common';
 import { MazeService } from '../maze.service';
 import { Router } from '@angular/router';
 import { MazeFinishedPipe } from '../component/maze-finished.pipe';
 
 @Component({
   standalone: true,
-  imports: [AsyncPipe, MazeFinishedPipe],
+  imports: [AsyncPipe, MazeFinishedPipe, DatePipe],
   template: `
     @for (maze of mazes$ | async; track maze.id) {
       <div>
         <span>
-          {{ maze | mzMazeFinished }} Maze {{ maze.id }}
+          {{ maze | mzMazeFinished }} Maze {{ maze.id }} - {{ maze.createdAt | date: 'dd/MM/yy HH:mm' }}
           <button (click)="goToDetail(maze.id)">👀</button>
           <button (click)="delete(maze.id)">🗑️</button></span
         >
