@@ -10,9 +10,8 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   standalone: true,
-  imports: [MazeComponent, AsyncPipe, RouterLink, JsonPipe, DatePipe, MazeMetadataComponent],
+  imports: [MazeComponent, AsyncPipe, JsonPipe, DatePipe, MazeMetadataComponent],
   template: `
-    <button routerLink="/overview">⬅️</button>
     @if (maze$ | async; as maze) {
       <div class="maze">
         <mz-maze [maze]="maze" />
