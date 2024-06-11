@@ -10,6 +10,7 @@ import { MazeFinishedPipe } from '../component/maze-finished.pipe';
   standalone: true,
   imports: [AsyncPipe, MazeFinishedPipe, DatePipe],
   template: `
+    <h1>Mazes</h1>
     @for (maze of mazes$ | async; track maze.id) {
       <div>
         <span>
