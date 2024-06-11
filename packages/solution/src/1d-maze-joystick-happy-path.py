@@ -27,7 +27,7 @@ maze_id = maak_maze(api_base_url)
 print('Open je browser en ga naar https://maze.zavo.academy/detail/' + maze_id)
 finished = False
 while not finished:
-    input_gebruiker = input('In welke richting wil je bewegeen: d = ⬆️, s = ⬇️, q = ⬅️, d = ➡️?')
+    input_gebruiker = input('In welke richting wil je bewegeen: z = ⬆️, s = ⬇️, q = ⬅️, d = ➡️?')
     if input_gebruiker == 'z':
         finished = beweeg_in_maze(api_base_url, maze_id, 'up')
     elif input_gebruiker == 's':
