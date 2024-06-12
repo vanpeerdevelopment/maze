@@ -36,6 +36,6 @@ Walk through a randomly generated maze using a REST api
 
 ## TODO LATER
 
-- Styling
-- SSE
+- Styling: retro ui met muziek
+- SSE: ook events naar frontend bij errors bv tegen muur, finished, geen goud, goud attempts op
 - API docs
