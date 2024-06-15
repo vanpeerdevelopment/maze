@@ -1,7 +1,7 @@
 {
   "name": "maze-api",
   "version": "0.0.0",
-  "main": "src/app.ts",
+  "main": "dist/app.js",
   "scripts": {
     "clean": "rm -rf dist",
     "prebuild": "pnpm clean",
